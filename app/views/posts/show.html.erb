@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+
+<%= simple_format @post.body %>
+
+<%= simple_form_for([@post, @comment]) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :body %>
+  <%= f.button :submit, "Submit Comment" %>
+<% end %>
+
+<%= div_for(@post.comments) do |comment| %>
+  <h2>Comment by: <%= comment.name %></h2>
+  <%= simple_format comment.body %>
+<% end %>
