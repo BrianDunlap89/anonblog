@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    render :new
   end
 
   def create
@@ -22,6 +21,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
   end
+
+  private 
 
   def post_params
     params.require(:post).permit(:title, :body)
