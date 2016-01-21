@@ -10,7 +10,7 @@ Background:
     |My Second Post|This is my second post|
   And I am on the home page
   And I follow "My Second Post"
-@wip
+
 Scenario: Creating a comment
   When I fill in "Name" with "Brian"
   And I fill in "Body" with "An excellent comment"
